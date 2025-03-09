@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocalSense - Voice Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎤 VocalSense - Live Voice Recognition</h1>
+        <p>Click the button below and start speaking.</p>
+        
+        <button id="record-btn">🎙️ Start Recording</button>
+
+        <div class="output">
+            <h2 id="greeting"></h2>
+            <p><strong>Speaker:</strong> <span id="speaker"></span></p>
+            <p><strong>Emotion:</strong> <span id="emotion"></span></p>
+            <p><strong>Age & Gender:</strong> <span id="age-gender"></span></p>
+        </div>
+
+        <div id="register-section" style="display: none;">
+            <p>Unknown User? Register your voice.</p>
+            <input type="text" id="name" placeholder="Enter your name">
+            <button id="register-btn">Register</button>
+        </div>
+    </div>
+
+</body>
+</html>
